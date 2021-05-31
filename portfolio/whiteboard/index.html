@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="content">
+		<div class="menu">
+			<div class="set">
+				<div id="clear-canvas" class="button">Clear</div>
+			</div>
+			<div class="set">
+				<ul class="colors">
+					<li style="background: #ffffff;"></li>
+					<li style="background: #0066ff;"></li>
+					<li style="background: #66bb00;"></li>
+					<li style="background: #ffcc00;"></li>
+					<li style="background: #cc0000;"></li>
+					<li style="background: #663300;"></li>
+					<li style="background: #000000;" class="active"></li>
+				</ul>
+				<div class="mt30">
+					<label for="color-picker">Pick color:</label>
+					<input class="color-picker mt10" id="color-picker" type="color" name="color-picker" value="#ff00ff">
+				</div>
+			</div>
+			<div class="set">
+				<ul class="strokes">
+					<li style="width: 3px; height: 3px;"></li>
+					<li style="width: 9px; height: 9px;"></li>
+					<li style="width: 15px; height: 15px;" class="active"></li>
+					<li style="width: 24px; height: 24px;"></li>
+					<li style="width: 30px; height: 30px;"></li>
+				</ul>
+			</div>
+			<div class="set">
+				<ul class="tools">
+					<li class="active" id="draw"><div class="button">Draw</div></li>
+					<!-- <li class="button" id="line">Line</li>
+					<li class="button" id="rectangle">Rect</li>
+					<li class="button" id="text">Text</li> -->
+					<li id="erase"><div class="button">Erase</div></li>
+				</ul>
+			</div>
+		</div>
+		<div class="board">
+			<canvas id="my-canvas" width="2000" height="2000"></canvas>
+		</div>
+	</div>
+<script src="script.js"></script>
+</body>
+</html>
