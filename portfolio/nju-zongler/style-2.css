@@ -1,0 +1,323 @@
+.st0 {
+  fill: #0f7da2; }
+
+.st1 {
+  fill: #ece810; }
+
+.st2 {
+  fill: #d1c829; }
+
+#zongler .separator {
+  height: 10px;
+  border: none; }
+#zongler .arch-slider-row h2 {
+  font-size: 2.8em; }
+  #zongler .arch-slider-row h2 .bigger {
+    font-size: 1.57em; }
+    @media all and (min-width: 481px) {
+      #zongler .arch-slider-row h2 .bigger {
+        font-size: 1em; } }
+@media all and (max-width: 480px) {
+  #zongler .arch-slider-row .content-col {
+    padding-top: 0 !important; } }
+#zongler .arch-slider {
+  position: relative;
+  height: 120px;
+  animation-duration: 1.1s; }
+  @media all and (max-width: 480px) {
+    #zongler .arch-slider {
+      margin-top: 30px; } }
+  @media all and (min-width: 481px) {
+    #zongler .arch-slider {
+      background: url(http://www.njumobile.pl/b/dep/kuba/zongler-pip-upside-down.png) center top no-repeat;
+      background-size: 40% auto;
+      height: 40vw; } }
+  @media all and (min-width: 831px) {
+    #zongler .arch-slider {
+      position: relative;
+      background: url(http://www.njumobile.pl/b/dep/kuba/zongler-pip.png) center bottom no-repeat;
+      height: 600px; } }
+  @media all and (min-width: 831px) and (max-width: 900px) {
+    #zongler .arch-slider {
+      background-size: contain; } }
+  #zongler .arch-slider ul {
+    position: relative;
+    list-style-type: none;
+    padding: 0;
+    margin: 0; }
+    @media all and (max-width: 480px) {
+      #zongler .arch-slider ul {
+        width: 80%;
+        margin: 0 auto;
+        overflow: hidden;
+        height: 100%; } }
+  #zongler .arch-slider li {
+    display: none;
+    width: 100px;
+    height: 100px;
+    margin-left: -50px;
+    top: 5px;
+    padding: 0;
+    box-sizing: border-box;
+    background: #fff;
+    box-shadow: 3px 5px 0px 0px #ece810;
+    border-radius: 50%;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    transition: all 1.1s linear; }
+    @media all and (min-width: 481px) {
+      #zongler .arch-slider li {
+        width: 12vw;
+        height: 12vw;
+        margin-left: -6vw;
+        top: 3vw;
+        display: block;
+        transition: transform 0.7s 0.2s linear, background 0.2s 0.9s linear, width 0.2s 0.9s linear, height 0.2s 0.9s linear, box-shadow 0.2s 0.9s linear, margin 0.2s 0.9s linear; } }
+    @media all and (min-width: 831px) {
+      #zongler .arch-slider li {
+        width: 7.6vw;
+        height: 7.6vw;
+        margin-left: -3.8vw;
+        top: calc( 18vw + 20px ); } }
+    @media all and (min-width: 1321px) {
+      #zongler .arch-slider li {
+        width: 100px;
+        height: 100px;
+        margin-left: -50px;
+        top: 240px; } }
+    #zongler .arch-slider li:after {
+      content: '';
+      display: inline-block;
+      width: 1px;
+      height: 100%;
+      vertical-align: middle; }
+    #zongler .arch-slider li svg {
+      max-width: 80%;
+      max-height: 80%;
+      vertical-align: middle; }
+      #zongler .arch-slider li svg .st0, #zongler .arch-slider li svg .st1, #zongler .arch-slider li svg .st2 {
+        transition: fill 0.2s 0s linear; }
+    @media all and (max-width: 480px) {
+      #zongler .arch-slider li#item-3 {
+        display: block;
+        transform: translate(50vw) rotate(720deg); } }
+    @media all and (max-width: 480px) {
+      #zongler .arch-slider li#item-5 {
+        display: block;
+        transform: translate(-50vw) rotate(-720deg); } }
+    @media all and (max-width: 480px) {
+      #zongler .arch-slider li#item-4 {
+        display: block;
+        transform: translate(0) rotate(0deg); } }
+    @media all and (min-width: 481px) {
+      #zongler .arch-slider li#item-4 {
+        width: 15vw;
+        height: 15vw;
+        margin-left: -7.5vw;
+        background: #ece810;
+        box-shadow: 3px 5px 0px 0px #0f7da2; }
+        #zongler .arch-slider li#item-4 svg .st0, #zongler .arch-slider li#item-4 svg .st1, #zongler .arch-slider li#item-4 svg .st2 {
+          transition: fill 0.2s 0.9s linear; }
+        #zongler .arch-slider li#item-4 svg .st0, #zongler .arch-slider li#item-4 svg .st1 {
+          fill: #00b0ce; }
+        #zongler .arch-slider li#item-4 svg .st2 {
+          fill: #1b8cae; } }
+    @media all and (min-width: 831px) {
+      #zongler .arch-slider li#item-4 {
+        width: 8.7vw;
+        height: 8.7vw;
+        margin-left: -4.35vw; } }
+    @media all and (min-width: 1321px) {
+      #zongler .arch-slider li#item-4 {
+        width: 115px;
+        height: 115px;
+        margin-left: -57px; } }
+    #zongler .arch-slider li.next {
+      transition: transform 0.7s 0.2s linear, background 0.2s 0s linear, width 0.2s 0s linear, height 0.2s 0s linear, box-shadow 0.2s 0s linear, margin 0.2s 0s linear; }
+    @media all and (min-width: 481px) {
+      #zongler .arch-slider li.back-to-start {
+        animation: back-to-start-mobile 0.9s linear; } }
+    @media all and (min-width: 831px) {
+      #zongler .arch-slider li.back-to-start {
+        animation: back-to-start-rwd 0.9s linear; } }
+    @media all and (min-width: 1321px) {
+      #zongler .arch-slider li.back-to-start {
+        animation: back-to-start 1.1s linear; } }
+    @media all and (min-width: 481px) {
+      #zongler .arch-slider li.back-to-end {
+        animation: back-to-end-mobile 0.9s linear; } }
+    @media all and (min-width: 831px) {
+      #zongler .arch-slider li.back-to-end {
+        animation: back-to-end-rwd 0.9s linear; } }
+    @media all and (min-width: 1321px) {
+      #zongler .arch-slider li.back-to-end {
+        animation: back-to-end 1.1s linear; } }
+    @media all and (min-width: 481px) {
+      #zongler .arch-slider li#item-1 {
+        transform: rotate(0deg) translate(-39vw) rotate(0deg); } }
+    @media all and (min-width: 831px) {
+      #zongler .arch-slider li#item-1 {
+        transform: rotate(-25deg) translate(-20.1vw) rotate(25deg); } }
+    @media all and (min-width: 1321px) {
+      #zongler .arch-slider li#item-1 {
+        transform: rotate(-25deg) translate(-265px) rotate(25deg); } }
+    @media all and (min-width: 481px) {
+      #zongler .arch-slider li#item-2 {
+        transform: rotate(-23deg) translate(-34vw) rotate(23deg); } }
+    @media all and (min-width: 831px) {
+      #zongler .arch-slider li#item-2 {
+        transform: rotate(10deg) translate(-18.2vw) rotate(-10deg); } }
+    @media all and (min-width: 1321px) {
+      #zongler .arch-slider li#item-2 {
+        transform: rotate(10deg) translate(-240px) rotate(-10deg); } }
+    @media all and (min-width: 481px) {
+      #zongler .arch-slider li#item-3 {
+        transform: rotate(-50deg) translate(-27vw) rotate(50deg); } }
+    @media all and (min-width: 831px) {
+      #zongler .arch-slider li#item-3 {
+        transform: rotate(49deg) translate(-17.4vw) rotate(-49deg); } }
+    @media all and (min-width: 1321px) {
+      #zongler .arch-slider li#item-3 {
+        transform: rotate(49deg) translate(-230px) rotate(-49deg); } }
+    @media all and (min-width: 481px) {
+      #zongler .arch-slider li#item-4 {
+        transform: rotate(-90deg) translate(-22vw) rotate(90deg); } }
+    @media all and (min-width: 831px) {
+      #zongler .arch-slider li#item-4 {
+        transform: rotate(90deg) translate(-16.7vw) rotate(-90deg); } }
+    @media all and (min-width: 1321px) {
+      #zongler .arch-slider li#item-4 {
+        transform: rotate(90deg) translate(-220px) rotate(-90deg); } }
+    @media all and (min-width: 481px) {
+      #zongler .arch-slider li#item-5 {
+        transform: rotate(-130deg) translate(-27vw) rotate(130deg); } }
+    @media all and (min-width: 831px) {
+      #zongler .arch-slider li#item-5 {
+        transform: rotate(131deg) translate(-17.4vw) rotate(-133deg); } }
+    @media all and (min-width: 1321px) {
+      #zongler .arch-slider li#item-5 {
+        transform: rotate(133deg) translate(-230px) rotate(-133deg); } }
+    @media all and (min-width: 481px) {
+      #zongler .arch-slider li#item-6 {
+        transform: rotate(-157deg) translate(-34vw) rotate(157deg); } }
+    @media all and (min-width: 831px) {
+      #zongler .arch-slider li#item-6 {
+        transform: rotate(170deg) translate(-18.2vw) rotate(-170deg); } }
+    @media all and (min-width: 1321px) {
+      #zongler .arch-slider li#item-6 {
+        transform: rotate(170deg) translate(-240px) rotate(-170deg); } }
+    @media all and (min-width: 481px) {
+      #zongler .arch-slider li#item-7 {
+        transform: rotate(-180deg) translate(-39vw) rotate(180deg); } }
+    @media all and (min-width: 831px) {
+      #zongler .arch-slider li#item-7 {
+        transform: rotate(205deg) translate(-20.1vw) rotate(-205deg); } }
+    @media all and (min-width: 1321px) {
+      #zongler .arch-slider li#item-7 {
+        transform: rotate(205deg) translate(-265px) rotate(-205deg); } }
+  #zongler .arch-slider .arrow {
+    position: absolute;
+    bottom: 0; }
+    #zongler .arch-slider .arrow:hover {
+      color: #ece810; }
+    #zongler .arch-slider .arrow:after {
+      display: block;
+      width: 110px;
+      height: 110px;
+      margin: 0 20px;
+      box-sizing: border-box;
+      text-decoration: none;
+      text-align: center;
+      font: 400 50px/110px "fontello";
+      color: #0f7da2; }
+      @media all and (max-width: 1320px) {
+        #zongler .arch-slider .arrow:after {
+          width: 7vw;
+          height: 9vw;
+          line-height: 9vw;
+          margin: 0; } }
+      @media all and (max-width: 480px) {
+        #zongler .arch-slider .arrow:after {
+          width: 10%;
+          height: 110px;
+          line-height: 110px; } }
+    #zongler .arch-slider .arrow.left {
+      left: 0; }
+      #zongler .arch-slider .arrow.left:after {
+        content: '\E814'; }
+    #zongler .arch-slider .arrow.right {
+      right: 0; }
+      #zongler .arch-slider .arrow.right:after {
+        content: '\E815'; }
+    #zongler .arch-slider .arrow span {
+      font-size: 0;
+      line-height: 0; }
+#zongler .arch-slider-content {
+  position: relative;
+  overflow: hidden; }
+  #zongler .arch-slider-content .arch-slider-slide {
+    width: 100%;
+    margin-left: -100%;
+    position: absolute; }
+    #zongler .arch-slider-content .arch-slider-slide:nth-child(4) {
+      margin-left: 0; }
+  #zongler .arch-slider-content h3 {
+    padding: 10px 0; }
+#zongler .arch-slider-dots {
+  margin-top: 30px;
+  font-size: 0;
+  line-height: 0; }
+  #zongler .arch-slider-dots > div {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #fff;
+    display: inline-block;
+    margin: 0 3px;
+    cursor: pointer;
+    transition: all .5s; }
+    #zongler .arch-slider-dots > div.active {
+      background: #ece810;
+      transition: all .5s; }
+#zongler .btn-big {
+  font-size: 1.5em;
+  padding: 20px 40px 15px !important;
+  box-sizing: border-box; }
+
+@keyframes back-to-start {
+  0% {
+    transform: rotate(205deg) translate(-265px) rotate(-205deg); }
+  50% {
+    transform: rotate(90deg) translate(-50px) rotate(90deg); }
+  100% {
+    transform: rotate(-25deg) translate(-265px) rotate(385deg); } }
+@keyframes back-to-end {
+  0% {
+    transform: rotate(-25deg) translate(-265px) rotate(385deg); }
+  50% {
+    transform: rotate(90deg) translate(-50px) rotate(90deg); }
+  100% {
+    transform: rotate(205deg) translate(-265px) rotate(-205deg); } }
+@keyframes back-to-start-rwd {
+  0% {
+    transform: rotate(205deg) translate(-20.1vw) rotate(-205deg) rotate(-45deg) translate(-25.77vw) rotate(90deg) translate(0, -25.77vw) rotate(-45deg); }
+  100% {
+    transform: rotate(205deg) translate(-20.1vw) rotate(-205deg) rotate(-45deg) translate(-25.77vw) rotate(0deg) translate(0, -25.77vw) rotate(410deg); } }
+@keyframes back-to-end-rwd {
+  0% {
+    transform: rotate(-25deg) translate(-20.1vw) rotate(25deg) rotate(45deg) translate(25.77vw) rotate(-90deg) translate(0, -25.77vw) rotate(45deg); }
+  100% {
+    transform: rotate(-25deg) translate(-20.1vw) rotate(25deg) rotate(45deg) translate(25.77vw) rotate(0deg) translate(0, -25.77vw) rotate(315deg); } }
+@keyframes back-to-start-mobile {
+  0% {
+    transform: rotate(180deg) translate(-39vw) rotate(180deg); }
+  100% {
+    transform: rotate(0deg) translate(-39vw) rotate(0deg); } }
+@keyframes back-to-end-mobile {
+  0% {
+    transform: rotate(0deg) translate(-39vw) rotate(0deg); }
+  100% {
+    transform: rotate(180deg) translate(-39vw) rotate(180deg); } }
+
+/*# sourceMappingURL=style-2.css.map */

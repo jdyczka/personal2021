@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<!-- <link rel="stylesheet" href="style.css"> -->
+	<style>
+		html {
+			height: 100%;
+			width: 100%;
+			background: #eee;
+			padding: 50px;
+			box-sizing: border-box;
+		}
+		a {
+			font: 100 20px/30px 'Open Sans Light', sans-serif;
+			display: block;
+			width: 750px;
+			height: 100px;
+			margin: 0 auto;
+			position: relative;
+		}
+		ul {
+			margin: 0;
+			padding: 0;
+		}
+		#banner {
+			border: 4px solid #DB6D4F;
+			box-sizing: border-box;
+			font: 100 20px/30px 'Open Sans Light', sans-serif;
+			background: white;
+			overflow: hidden;
+			width: 100%;
+			height: 100%;
+			position: relative;
+		}
+
+		/*---------------------------------------------------------*/
+		@keyframes wave-1 {
+			0%   { transform: translate(0); }
+			50%  { transform: translate(6px); }
+			100% { transform: translate(0); }
+		}
+		@keyframes wave-2 {
+			0%   { transform: translate(0); }
+			50%  { transform: translate(-3px); }
+			100% { transform: translate(0); }
+		}
+		.water {
+			position: absolute;
+			bottom: 40px;
+			left: -25px;
+			width: 800px;
+			height: 20px;
+			background: #92D6D7;
+			transition: height 2s ease-in;
+		}
+			.water:before,
+			.water:after {
+				content: "";
+				display: block;
+				height: 10px; 
+				width: 100%;
+				position: absolute;
+				top: -10px;
+				background-position: left bottom;
+				background-repeat: repeat;
+				background-size: auto 10px;
+				opacity: .5;
+			}
+				.water:before {
+					background-image: url(images/fala1.svg);
+					animation: wave-1 3.5s linear infinite;
+				}
+				.water:after {
+					background-image: url(images/fala2.svg);
+					animation: wave-2 3.3s linear infinite;
+				}
+
+		.sand {
+			width: 50%;
+			position: absolute;
+			bottom: 0;
+			left: 0
+		}
+			.sand img { max-width: 100%; display: block; }
+
+		.word {
+			width: 50%;
+			height: 100%;
+			position: absolute;
+			right: 0;
+			background: white;
+			overflow: hidden;
+			text-align: center;
+		}
+			.word .dashes {
+				height: 100%;
+				justify-content: center;
+			}
+				.word .dashes li {
+					display: inline-block;
+					border-bottom: 1px solid black;
+					width: 25px;
+					margin-right: 5px;
+					margin-top: 30px;
+				}
+
+		/*---------------------------------------------------------*/
+		@keyframes fall-1 {
+			0%   { transform: translate( 136px, 0 ); }
+			55%  { transform: translate( 136px, 100px ) rotate(0); }
+			80%  { transform: translate( 136px, 90px ); } 
+			100% { transform: translate( 136px, 100px ) rotate(70deg); }
+		}
+		@keyframes fall-2 {
+			0%   { transform: translate( 130px, 0 ); }
+			55%  { transform: translate( 130px, 100px ) rotate(0); }
+			80%  { transform: translate( 130px, 90px ); } 
+			100% { transform: translate( 130px, 100px ) rotate(-25deg); }
+		}
+		@keyframes fall-3 {
+			0%   { transform: translate( 170px, 0 ); }
+			55%  { transform: translate( 170px, 100px ) rotate(0); }
+			80%  { transform: translate( 170px, 90px ); } 
+			100% { transform: translate( 170px, 100px ) rotate(100deg); }
+		}
+		@keyframes fall-in-place-a {
+			0%   { transform: translate( 130px, 0 ); }
+			100% { transform: translate( 130px, 35px ); }
+		}
+		@keyframes fall-in-place-p {
+			0%   { transform: translate( 40px, 0 ); }
+			100% { transform: translate( 40px, 35px ); }
+		}
+		@keyframes fade-in {
+			0%   { opacity: 0; }
+			100% { opacity: 1; }
+		}
+			.word .letters {
+				position: absolute;
+				top: -30px;
+			}
+				.word .letters li { 
+					display: inline-block;
+					font-weight: bold; 
+					color: black; 
+				}
+
+				#W { animation: fall-1 1.5s ease-in forwards }
+				#A { animation: fall-in-place-a .5s 2s ease-in forwards }
+				#K { animation: fall-2 1.5s 2.5s ease-in forwards }
+				#P { animation: fall-in-place-p .5s 4.5s linear forwards }
+				#S { animation: fall-3 1.5s 5s ease-in forwards }
+				#L,#Y { 
+					animation: fade-in 1s 8s ease-in forwards;
+					position: absolute;
+					top: 35px;
+					opacity: 0;
+				}
+					#L { left: 160px; }
+					#Y { left: 230px; }
+
+		@keyframes water-rise {
+			0%   	{ transform: translate( 0, 0 ); }
+			18.75%  { transform: translate( 0, 0 ); }
+			25% 	{ transform: translate( 0, -18px ); }
+			50% 	{ transform: translate( 0, -18px ); }
+			56.25% 	{ transform: translate( 0, -36px ); }
+			81.25% 	{ transform: translate( 0, -36px ); }
+			87.5% 	{ transform: translate( 0, -54px ); }
+			100% 	{ transform: translate( 0, -54px ); }
+		}
+			.word .water {
+				bottom: -80px;
+				height: 80px;
+				animation: water-rise 8s linear forwards;
+				background: rgba(37, 174, 176, .5); 
+			}
+			.word .water:before,
+			.word .water:after {
+				height: 20px; 
+				top: -20px;
+				background-size: auto 20px;
+			}
+
+		/*---------------------------------------------------------*/
+		@keyframes slide-right {
+			0%   { transform: translate(0); }
+			30% { transform: translate(60%); }
+			40% { transform: translate(100%); }
+			55% { transform: translate(80%); }
+			65% { transform: translate(100%); }
+			80% { transform: translate(90%); }
+			100% { transform: translate(100%); }
+		}
+		.red-bg {
+			position: relative;
+			background: #DB6D4F;
+			width: 50%;
+			height: 100%;
+			animation: slide-right 1s 10s ease-out forwards;
+			padding: 10px;
+			box-sizing: border-box;
+		}
+			.red-bg img { max-height: 100%; float: right; }
+
+		/*---------------------------------------------------------*/
+		.modal {
+			width: 100%;
+			height: 100%;
+			background: rgba(255, 255, 255, .4);
+			position: absolute;
+			top: 0;
+			left: 0;
+			opacity: 0;
+			animation: fade-in 1s 12s ease-in forwards;
+			padding: 25px;
+			box-sizing: border-box;
+			text-align: center;
+		}
+
+		@keyframes wink {
+			0%   { background-color: #92D6D7; }
+			50%  { background-color: #70b4b5; }
+			100% { background-color: #92D6D7; }
+		}
+		.button {
+			color: white;
+			font-weight: bold;
+			background: #92D6D7;
+			margin: 0 auto;
+			height: 50px;
+			line-height: 50px;
+			display: inline-block;
+			padding: 0 30px;
+			animation: wink 3s ease-in-out infinite;
+		}
+	</style>
+</head>
+
+
+<body>
+	<a href="http://jdyczka.github.io/drownman" target="_blank">
+		<div id="banner">
+			<div class="sea">
+			 	<div class="water"></div>
+			 	<div class="sand"><img src="images/sand.svg"></div>
+		 	</div>
+		 	<div class="word">
+		 		<ul class="dashes">
+		 			<li></li>
+		 			<li></li>
+		 			<li></li>
+		 			<li></li>
+		 		</ul>
+		 		<ul class="letters">
+		 			<li id="W">W</li>
+		 			<li id="K">K</li>
+		 			<li id="S">S</li>
+		 			<li id="A">A</li>
+		 			<li id="P">P</li>
+		 			<li id="L">L</li>
+		 			<li id="Y">Y</li>
+		 		</ul>
+		 		<div class="water"></div>
+		 	</div>
+		 	<div class="red-bg">
+		 		<img src="images/logo-white.svg">
+		 	</div>
+		</div>
+	 	<div class="modal">
+	 		<div class="button">ZAGRAJ</div>
+	 	</div>
+	</a>
+</html>
