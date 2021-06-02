@@ -2,9 +2,14 @@ html {
 	height: 100%;
 	width: 100%;
 	background: #eee;
-	padding: 50px;
+	/* padding: 50px; */
 	box-sizing: border-box;
 }
+
+body {
+	margin: 0;
+}
+
 a {
 	font: 100 20px/30px 'Open Sans Light', sans-serif;
 	display: block;

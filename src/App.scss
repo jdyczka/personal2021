@@ -1,0 +1,18 @@
+$color-accent: rgb(231, 181, 42);
+
+.app {
+  background: rgb(241, 236, 229);
+
+  .button {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 20px;
+    background: $color-accent;
+    color: #fff;
+    font: normal 600 1rem/1 'Raleway';
+  }
+
+  .works_item image {
+    min-width: 200px;
+  }
+}
