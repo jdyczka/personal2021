@@ -10,6 +10,6 @@ code {
     monospace;
 }
 
-img, video, iframe {
+img, video {
   max-width: 100%;
 }

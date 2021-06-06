@@ -1,23 +1,5 @@
 const worksData = [
     {
-        title: 'Logo and Animation for a medical centre',
-        description: '',
-        images: ['holi-logo.svg'],
-        link: ''
-    },
-    {
-        title: 'Hangman-style game with a banner',
-        description: '',
-        images: [],
-        link: ''
-    },
-    {
-        title: 'Simple drawboard',
-        description: '',
-        images: [],
-        link: ''
-    },
-    {
         title: 'Slider with fun animations',
         description: '',
         images: [],
@@ -25,12 +7,6 @@ const worksData = [
     },
     {
         title: 'pogoda - D3',
-        description: '',
-        images: [],
-        link: ''
-    },
-    {
-        title: 'Mock website for a fictional dance studio',
         description: '',
         images: [],
         link: ''

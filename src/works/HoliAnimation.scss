@@ -1,0 +1,114 @@
+.holi-animation {
+    font-family: 'Raleway';
+    font-feature-settings: 'lnum'1;
+    text-align: center;
+        width: 30vw;
+        max-width: 200px;
+        margin: 0 auto;
+
+    svg {
+        position: relative;
+        // padding-bottom: 50%;
+        // top: 50%;
+        // left: 50%;
+        // transform: translate(-50%, -50%);
+        // transform-origin: 50% 20%;
+        overflow: visible;
+    }
+
+    .petal {
+        transform-origin: 50% 58px;
+    }
+
+    .letters {
+        stroke-width: 4.55px;
+        stroke: #000;
+        fill: none;
+        transform-origin: 50% 38px;
+
+        polyline {
+            stroke-dasharray: 238px;
+        }
+
+        path {
+            stroke-dasharray: 116px;
+        }
+    }
+
+    .title, .subtitle {
+        transform: translate(-207px, -70px);
+    }
+
+    .animate {
+
+        .petal:nth-child(1) {
+            animation: petal-center 1s 1s both, fade-in 1s 1s both;
+        }
+
+        .petal:nth-child(2) {
+            animation: petal-left 1s 1s both, fade-in 1s 1s both;
+        }
+
+        .petal:nth-child(3) {
+            animation: petal-right 1s 1s both, fade-in 1s 1s both;
+        }
+
+        .letters {
+            animation: rotate 1s 1s both;
+
+            polyline {
+                animation: letter-h 1s both;
+            }
+
+            path {
+                animation: letter-c 1s both;
+            }
+        }
+
+        .title, .subtitle {
+            animation: fade-in 2s 2s both;
+        }
+    }
+
+    @keyframes petal-center {
+        from {
+            transform: rotate(-65deg);
+        }
+    }
+
+    @keyframes petal-left {
+        from {
+            transform: rotate(-20deg);
+        }
+    }
+
+    @keyframes petal-right {
+        from {
+            transform: rotate(-110deg);
+        }
+    }
+
+    @keyframes fade-in {
+        from {
+            opacity: 0;
+        }
+    }
+
+    @keyframes letter-h {
+        from {
+            stroke-dashoffset: 238px;
+        }
+    }
+
+    @keyframes letter-c {
+        from {
+            stroke-dashoffset: -116px;
+        }
+    }
+
+    @keyframes rotate {
+        from {
+            transform: rotate(90deg);
+        }
+    }
+}
