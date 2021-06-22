@@ -48,7 +48,7 @@ export default function WorksItem({ title, href, children, description, used }) 
                 <div>{description}</div>
                 <div className="works_item_used">
                     {used?.map((icon, id) =>
-                        <div data-text={icons[icon]?.text}>
+                        <div data-text={icons[icon]?.text} key={id}>
                             <img key={id} src={'/assets/icons/' + icons[icon]?.file} alt={icons[icon]?.text} />
                         </div>
                     )}

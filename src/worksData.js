@@ -6,12 +6,6 @@ const worksData = [
         link: ''
     },
     {
-        title: 'pogoda - D3',
-        description: '',
-        images: [],
-        link: ''
-    },
-    {
         title: 'Book browsing web app that uses Google Books Api',
         description: '',
         images: [],

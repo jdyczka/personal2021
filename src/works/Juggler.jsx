@@ -4,15 +4,14 @@ import WorksItem from '../WorksItem'
 export default function Juggler() {
 
     const desc = (<>
-        <p>For this project I both designed and implemented a website for a fictional dance studio. It is mostly a static website, but it also includes a filterable table.</p>
-        <p>The website is implemented using React.js and utilizes styled-components for css-in-js. It also features a few slick-slider carousels. </p>
+        <p>description</p>
     </>)
 
     return (
         
         <WorksItem
-                title='Website for a dance studio'
-                href='http://piruet.vipserv.org/'
+                title='Custom slider with unusual animation'
+                href='http://jdyczka.vipserv.org/juggler'
                 description={desc}
                 used={['react', 'router', 'styled']}
             >

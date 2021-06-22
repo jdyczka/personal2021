@@ -16,3 +16,36 @@ $color-accent: rgb(231, 181, 42);
     min-width: 200px;
   }
 }
+
+$patterns: 
+  'brickwall', 
+  'concrete_seamless',
+  'concrete-texture',
+  'ep_naturalwhite',
+  'just-waves',
+  'mochaGrunge',
+  'mooning',
+  'old_moon',
+  'stardust',
+  'tic-tac-toe',
+  'wavy-dots',
+  'bgnoise_lg',
+  'graphy',
+  'grilled',
+  'kindajean',
+  'lightpaperfibers',
+  'old_wall',
+  'ricepaper',
+  'ricepaper2',
+  'rockywall',
+  'struckaxiom',
+  'subtle_zebra_3d',
+  'texturetastic_gray',
+  'vintage_speckles',
+  'white_paperboard';
+
+@each $pattern in $patterns {
+  .bg-#{$pattern} {
+    background: url(/assets/patterns/#{$pattern}/#{$pattern}.png) repeat;
+  }
+} 
