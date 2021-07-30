@@ -30,6 +30,7 @@ export default function Holi() {
             <div style={{
                 display: 'flex',
                 alignItems: 'center',
+                background: '#fff',
             }}>
                 <img src="/assets/holi-logo.svg" alt="HoliClinic" />
                 <div className='holi-animation'>

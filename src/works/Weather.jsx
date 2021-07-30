@@ -18,11 +18,11 @@ export default function Weather() {
         >
             <div style={{
                 display: 'grid',
-                gridTemplateColumns: '2.32fr 1fr 1fr',
+                gridTemplateColumns: '2.32fr 1fr',
                 gridGap: 20,
             }}>
                 <img src='/assets/weather.png' alt='' />
-                <img src='/assets/weather-m-1.png' alt='' />
+                {/* <img src='/assets/weather-m-1.png' alt='' /> */}
                 <img src='/assets/weather-m-2.png' alt='' />
             </div>
         </WorksItem>

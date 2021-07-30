@@ -40,7 +40,7 @@ function App() {
       <header className="App-header">
 
       </header>
-      <section>
+      <section className="intro">
         <h1>Hi, I'm Joanna</h1>
         <form>
           {

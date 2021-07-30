@@ -17,6 +17,14 @@ $color-accent: rgb(231, 181, 42);
   }
 }
 
+section {
+  padding: 40px;
+}
+
+.intro {
+  background: #bbb;
+}
+
 $patterns: 
   'brickwall', 
   'concrete_seamless',

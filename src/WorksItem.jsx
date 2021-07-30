@@ -39,12 +39,24 @@ export default function WorksItem({ title, href, children, description, used }) 
             file: 'adobe-illustrator-cc-seeklogo.com.svg',
             text: 'Adobe Illustrator'
         },
+        gulp: {
+            file: 'gulp2-seeklogo.com.svg',
+            text: 'Gulp'
+        },
+        jquery: {
+            file: 'jquery-seeklogo.com.svg',
+            text: 'jQuery'
+        },
+        mustache: {
+            file: 'mustache-logo.png',
+            text: 'Mustache.js'
+        },
     }
 
     return (
         <div className="works_item">
             <div className="works_item_info">
-                <h2>{title}</h2>
+                <h3>{title}</h3>
                 <div>{description}</div>
                 <div className="works_item_used">
                     {used?.map((icon, id) =>

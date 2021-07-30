@@ -22,8 +22,7 @@ export default function Drownman() {
                 width="750"
                 height="100"
                 style={{
-                    marginLeft: 'auto',
-                    marginBottom: '40px',
+                    margin: '0 auto 40px',
                     display: 'block',
                 }}></iframe>
             <div className="flex">
@@ -31,7 +30,7 @@ export default function Drownman() {
                     src='/assets/drownman.png' 
                     alt='' 
                     style={{
-                        width: '80%'
+                        // width: '80%'
                     }}/>
                 {/* <video src="/assets/drownman.webm" autoPlay loop muted></video> */}
 

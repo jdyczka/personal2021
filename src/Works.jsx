@@ -13,14 +13,17 @@ import Books from './works/Books'
 export default function Works() {
 
     return (
-        <div className="works">
-            <Books />
-            <Weather/>
-            <Piruet/>
-            <Drownman/>
-            <Holi/>
-            <Paint/>
-            <Juggler/>
+        <section className="works bg-stardust">
+            <h2>Works</h2>
+            <div>
+                <Books />
+                <Weather />
+                <Piruet />
+                <Drownman />
+                <Holi />
+                <Paint />
+                <Juggler />
+            </div>
 
             {/* <Piruet/>
             <Drownman/>
@@ -29,6 +32,6 @@ export default function Works() {
             <Weather/>
             <Juggler/>
             <Books /> */}
-        </div>
+        </section>
     )
 }
