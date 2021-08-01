@@ -13,7 +13,7 @@ import Books from './works/Books'
 export default function Works() {
 
     return (
-        <section className="works bg-stardust">
+        <section className="works bg-stardust" id="works">
             <h2>Works</h2>
             <div>
                 <Books />
