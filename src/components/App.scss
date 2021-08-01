@@ -1,4 +1,4 @@
-$color-accent: rgb(231, 181, 42);
+@import '../variables.scss';
 
 .app {
   background: rgb(241, 236, 229);
@@ -23,39 +23,71 @@ section {
 }
 
 .top-section {
-  background: rgba(241, 171, 57, 0.904);
+  background: $color-accent;
   min-height: calc(100vh - 50px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  // mix-blend-mode: screen;
+
+  .frame {
+    max-width: 600px;
+    margin: 0 auto;
+    border: 1px solid #333;
+    padding: 50px;
+    margin-top: -1.5rem;
+  }
+
+  h1 {
+    color: #fff;  
+    font-size: 3rem;
+    background: $color-accent;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: auto;
+    z-index: 1;
+  }
+
 }
 
-$patterns: 
-  'brickwall', 
-  'concrete_seamless',
-  'concrete-texture',
-  'ep_naturalwhite',
-  'just-waves',
-  'mochaGrunge',
-  'mooning',
-  'old_moon',
-  'stardust',
-  'tic-tac-toe',
-  'wavy-dots',
-  'bgnoise_lg',
-  'graphy',
-  'grilled',
-  'kindajean',
-  'lightpaperfibers',
-  'old_wall',
-  'ricepaper',
-  'ricepaper2',
-  'rockywall',
-  'struckaxiom',
-  'subtle_zebra_3d',
-  'texturetastic_gray',
-  'vintage_speckles',
-  'white_paperboard';
+h1, h2 {
+  // font-family:, Elsie, 'Cinzel Decorative', 'Vampiro One', cursive;
+  // font-family: 'Amatic SC', cursive;
+  font-family: 'Homemade Apple', cursive;
+  font-family: 'League Script', cursive;
+  font-family: 'Meddon', cursive;
+}
+
+$patterns: 'brickwall',
+'concrete_seamless',
+'concrete-texture',
+'ep_naturalwhite',
+'just-waves',
+'mochaGrunge',
+'mooning',
+'old_moon',
+'stardust',
+'tic-tac-toe',
+'wavy-dots',
+'bgnoise_lg',
+'graphy',
+'grilled',
+'kindajean',
+'lightpaperfibers',
+'old_wall',
+'ricepaper',
+'ricepaper2',
+'rockywall',
+'struckaxiom',
+'subtle_zebra_3d',
+'texturetastic_gray',
+'vintage_speckles',
+'white_paperboard';
 
 @each $pattern in $patterns {
   .bg-#{$pattern} {
     background: url(/assets/patterns/#{$pattern}/#{$pattern}.png) repeat;
+    background-attachment: fixed;
   }
-} 
+}
