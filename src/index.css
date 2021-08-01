@@ -18,6 +18,26 @@ img, video {
   max-width: 100%;
 }
 
+a {
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+section {
+  padding: 40px;
+}
+
+h1, h2 {
+  /* font-family:, Elsie, 'Cinzel Decorative', 'Vampiro One', cursive;
+  font-family: 'Amatic SC', cursive; */
+  font-family: 'Homemade Apple', cursive;
+  font-family: 'League Script', cursive;
+  font-family: 'Meddon', cursive;
+}
+
 .text-left {
   text-align: left;
 }
