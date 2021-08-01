@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './HoliAnimation.scss'
 import WorksItem from '../WorksItem'
-import HoliAnimation from './HoliAnimation'
+// import HoliAnimation from './HoliAnimation'
 
 export default function Holi() {
 

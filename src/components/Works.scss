@@ -13,6 +13,13 @@
             min-height: 80vh;
             display: grid;
             grid-gap: 20px;
+            opacity: 0;
+            transition: all .5s;
+
+            &.visible {
+                opacity: 1;
+                transform: translate(0) !important;
+            }
 
             @media (max-width: 1099px) {
                 align-content: center;
@@ -128,6 +135,13 @@
             width: 62.5%;
             left: 25%;
             border-right: $border-width solid $border-color;
+        }
+
+        &:nth-child(2n+1) .works_item_content {
+            transform: translate(150%);
+        }
+        &:nth-child(2n) .works_item_content {
+            transform: translate(-150%);
         }
 
     }

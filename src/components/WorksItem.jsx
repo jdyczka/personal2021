@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef, useEffect, useState } from 'react'
 
 export default function WorksItem({ title, href, children, description, used }) {
 
@@ -53,9 +53,25 @@ export default function WorksItem({ title, href, children, description, used }) 
         },
     }
 
+    const [isVisible, setIsVisible] = useState(false);
+
+    const domRef = useRef();
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => setIsVisible(entry.isIntersecting));
+        }, {
+            threshold: .6,
+        });
+
+        observer.observe(domRef.current);
+
+        return () => observer.unobserve(domRef.current);
+    }, []);
+
     return (
-        <div className="works_item">
-            <div className="works_item_content">
+        <div className="works_item" ref={ domRef }>
+            <div className={`works_item_content ${isVisible ? 'visible' : ''}`}>
                 <div className="works_item_info">
                     <h3>{title}</h3>
                     <div>{description}</div>
