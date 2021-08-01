@@ -21,8 +21,9 @@ section {
   padding: 40px;
 }
 
-.intro {
-  background: #bbb;
+.top-section {
+  background: #fff9;
+  min-height: calc(100vh - 50px);
 }
 
 $patterns: 

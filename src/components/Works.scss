@@ -1,4 +1,4 @@
-.works {    
+.works {
     h2 {
         color: #eee;
         text-align: center;
@@ -7,17 +7,22 @@
     &_item {
         $border-color: #fff;
         $border-width: 1px;
-        min-height: 80vh;
-        display: grid;
-        grid-gap: 20px;
         position: relative;
 
-        @media (max-width: 1099px) {
-            align-content: center;
+        &_content {
+            min-height: 80vh;
+            display: grid;
+            grid-gap: 20px;
+
+            @media (max-width: 1099px) {
+                align-content: center;
+            }
         }
 
         @media (min-width: 1100px) {
-            grid-template-columns: repeat(8, 1fr);
+            &_content {
+                grid-template-columns: repeat(8, 1fr);
+            }
 
             &_info {
                 grid-column: 1 / 4;
@@ -63,9 +68,11 @@
             &[data-text="styled-components"] {
                 width: 50px;
             }
+
             &[data-text="jQuery"] {
                 width: 80px;
             }
+
             &[data-text="Mustache.js"] {
                 width: 60px;
             }

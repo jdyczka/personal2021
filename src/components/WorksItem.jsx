@@ -55,20 +55,22 @@ export default function WorksItem({ title, href, children, description, used }) 
 
     return (
         <div className="works_item">
-            <div className="works_item_info">
-                <h3>{title}</h3>
-                <div>{description}</div>
-                <div className="works_item_used">
-                    {used?.map((icon, id) =>
-                        <div data-text={icons[icon]?.text} key={id}>
-                            <img key={id} src={'/assets/icons/' + icons[icon]?.file} alt={icons[icon]?.text} />
-                        </div>
-                    )}
+            <div className="works_item_content">
+                <div className="works_item_info">
+                    <h3>{title}</h3>
+                    <div>{description}</div>
+                    <div className="works_item_used">
+                        {used?.map((icon, id) =>
+                            <div data-text={icons[icon]?.text} key={id}>
+                                <img key={id} src={'/assets/icons/' + icons[icon]?.file} alt={icons[icon]?.text} />
+                            </div>
+                        )}
+                    </div>
+                    {href ? <a className='button' href={href} target='_blank' rel="noreferrer">Check it out</a> : ''}
                 </div>
-                {href ? <a className='button' href={href} target='_blank' rel="noreferrer">Check it out</a> : ''}
-            </div>
-            <div className="works_item_children">
-                {children}
+                <div className="works_item_children">
+                    {children}
+                </div>
             </div>
         </div>
     )
