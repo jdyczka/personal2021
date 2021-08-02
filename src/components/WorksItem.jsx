@@ -58,15 +58,22 @@ export default function WorksItem({ title, href, children, description, used }) 
     const domRef = useRef();
 
     useEffect(() => {
+        let observerRefValue = null; // <-- variable to hold ref value
+      
         const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => setIsVisible(entry.isIntersecting));
         }, {
             threshold: .6,
         });
-
-        observer.observe(domRef.current);
-
-        return () => observer.unobserve(domRef.current);
+      
+        if (domRef.current) {
+          observer.observe(domRef.current);
+          observerRefValue = domRef.current; // <-- save ref value
+        }
+      
+        return () => {
+          if (observerRefValue) observer.unobserve(observerRefValue); // <-- use saved value
+        };
     }, []);
 
     return (
