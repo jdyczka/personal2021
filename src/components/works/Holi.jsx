@@ -27,12 +27,8 @@ export default function Holi() {
             description={desc}
             used={['ai', 'css']}
         >
-            <div style={{
-                display: 'flex',
-                alignItems: 'center',
-                background: '#fff',
-            }}>
-                <img src="/assets/holi-logo.svg" alt="HoliClinic" />
+            <div className='holi-content'>
+                <img className='holi-logo' src="/assets/holi-logo.svg" alt="HoliClinic" />
                 <div className='holi-animation'>
                     <svg viewBox="0 0 79.57 80.55" className={shouldAnimate ? 'animate' : ''}>
                         <g className="logo">

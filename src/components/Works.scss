@@ -2,7 +2,7 @@
 
 .works {
     padding-bottom: 0;
-    
+
     h2 {
         color: #eee;
         text-align: center;
@@ -68,6 +68,10 @@
 
             h3 {
                 margin-top: 0;
+            }
+
+            @media (max-width: 568px) {
+                padding: 20px;
             }
         }
 
@@ -146,10 +150,24 @@
         &:nth-child(2n+1) .works_item_content {
             transform: translate(150%);
         }
+
         &:nth-child(2n) .works_item_content {
             transform: translate(-150%);
         }
 
+    }
+}
+
+.holi-content {
+    background: #fff;
+    display: grid;
+    padding: 60px;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+
+    @media (min-width: 768px) {
+        grid-template-columns: 1fr 1fr;
     }
 }
 

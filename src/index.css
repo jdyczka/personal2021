@@ -2,9 +2,17 @@
   box-sizing: border-box;
 }
 
+:root {
+  font-size: 20px;
+}
+
 body {
   margin: 0;
-  font: normal 300 1rem/1.25 'Raleway';
+}
+
+body,button {
+  margin: 0;
+  font: normal 300 1rem/1.25 Lato;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -36,4 +44,11 @@ h1, h2 {
 
 .text-left {
   text-align: left;
+}
+
+@media (max-width: 767px) {
+  
+  section {
+    padding: 40px 20px;
+  }
 }
