@@ -1,4 +1,5 @@
-import React, { useRef, useEffect, useState } from 'react'
+import React, { useRef, useState } from 'react'
+import WithIntersectionObserver from './WithIntersectionObserver';
 
 export default function WorksItem({ title, href, children, description, used }) {
 
@@ -57,44 +58,29 @@ export default function WorksItem({ title, href, children, description, used }) 
 
     const domRef = useRef();
 
-    useEffect(() => {
-        let observerRefValue = null; // <-- variable to hold ref value
-      
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => setIsVisible(entry.isIntersecting));
-        }, {
-            threshold: .6,
-        });
-      
-        if (domRef.current) {
-          observer.observe(domRef.current);
-          observerRefValue = domRef.current; // <-- save ref value
-        }
-      
-        return () => {
-          if (observerRefValue) observer.unobserve(observerRefValue); // <-- use saved value
-        };
-    }, []);
-
     return (
-        <div className="works_item" ref={ domRef }>
-            <div className={`works_item_content ${isVisible ? 'visible' : ''}`}>
-                <div className="works_item_info">
-                    <h3>{title}</h3>
-                    <div>{description}</div>
-                    <div className="works_item_used">
-                        {used?.map((icon, id) =>
-                            <div data-text={icons[icon]?.text} key={id}>
-                                <img key={id} src={'/assets/icons/' + icons[icon]?.file} alt={icons[icon]?.text} />
-                            </div>
-                        )}
+        <WithIntersectionObserver domRef={domRef} options={{threshold: .6}} callback={entries => {
+            entries.forEach(entry => setIsVisible(entry.isIntersecting));
+        }}>
+            <div className="works_item" ref={domRef}>
+                <div className={`works_item_content ${isVisible ? 'visible' : ''}`}>
+                    <div className="works_item_info">
+                        <h3>{title}</h3>
+                        <div>{description}</div>
+                        <div className="works_item_used">
+                            {used?.map((icon, id) =>
+                                <div data-text={icons[icon]?.text} key={id}>
+                                    <img key={id} src={'/assets/icons/' + icons[icon]?.file} alt={icons[icon]?.text} />
+                                </div>
+                            )}
+                        </div>
+                        {href ? <a className='button' href={href} target='_blank' rel="noreferrer">Check it out</a> : ''}
                     </div>
-                    {href ? <a className='button' href={href} target='_blank' rel="noreferrer">Check it out</a> : ''}
-                </div>
-                <div className="works_item_children">
-                    {children}
+                    <div className="works_item_children">
+                        {children}
+                    </div>
                 </div>
             </div>
-        </div>
+        </WithIntersectionObserver>
     )
 }

@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import WorksItem from '../WorksItem'
+import WithIntersectionObserver from '../WithIntersectionObserver';
 
 export default function Drownman() {
 
@@ -8,6 +9,8 @@ export default function Drownman() {
         <p>The banner animation is fully done using CSS animations.</p>
     </>)
 
+    const domRef = useRef();
+
     return (
         <WorksItem
             title="Hangman-style game and a dedicated banner"
@@ -15,7 +18,20 @@ export default function Drownman() {
             description={desc}
             used={['js', 'css', 'ai']}
         >
-            <iframe
+            <WithIntersectionObserver domRef={domRef} options={{ threshold: .1 }} callback={entries => {
+                entries.forEach(entry => {
+                    console.log(entry)
+                    if (entry.isIntersecting) entry.target.play();
+                    else entry.target.pause();
+                });
+            }}>
+                <div className="banner-box">
+                    <video ref={domRef} src='assets/baner-video-raw.webm' loop muted></video>
+                </div>
+            </WithIntersectionObserver>
+            {/* <div className='banner-box'>
+                <iframe
+                className='baner-iframe'
                 title='Drownman Banner'
                 src="http://jdyczka.vipserv.org/baner"
                 frameBorder="0"
@@ -25,17 +41,18 @@ export default function Drownman() {
                     margin: '0 auto 40px',
                     display: 'block',
                 }}></iframe>
-            <div className="flex">
-                <img 
-                    src='/assets/drownman.png' 
-                    alt='' 
-                    style={{
-                        // width: '80%'
-                    }}/>
-                {/* <video src="/assets/drownman.webm" autoPlay loop muted></video> */}
+            </div> */}
+                <div className="flex">
+                    <img
+                        src='/assets/drownman.png'
+                        alt=''
+                        style={{
+                            // width: '80%'
+                        }} />
+                    {/* <video src="/assets/drownman.webm" autoPlay loop muted></video> */}
 
-            </div>
-            {/* <DrownBanner/> */}
+                </div>
+                {/* <DrownBanner/> */}
         </WorksItem>
-    )
+            )
 }
