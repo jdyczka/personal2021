@@ -8,11 +8,7 @@
 
 body {
   margin: 0;
-}
-
-body,button {
-  margin: 0;
-  font: normal 300 1rem/1.25 Lato;
+  font: normal 300 1rem/1.25 'Lato';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
