@@ -26,7 +26,10 @@ export default function Drownman() {
                 });
             }}>
                 <div className="banner-box">
-                    <video ref={domRef} src='assets/baner-video-raw.webm' loop muted></video>
+                    <video ref={domRef} loop muted>
+                        <source src='assets/baner-video-raw.webm' type='video/webm'/>
+                        <source src='assets/baner-video-raw.mp4' type='video/mp4'/>
+                    </video>
                 </div>
             </WithIntersectionObserver>
             {/* <div className='banner-box'>

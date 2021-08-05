@@ -1,0 +1,77 @@
+@import '../variables.scss';
+
+.top-section {
+    background: $color-accent;
+    min-height: calc(100vh - 50px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @media (max-width: 567px) {
+        padding: 20px;
+    }
+
+    &_intro {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .frame {
+        max-width: 600px;
+        margin: 0 auto;
+        border: 1px solid #333;
+        padding: 50px;
+        margin-top: -1.5rem;
+
+        @media (max-width: 567px) {
+            padding: 25px 15px 15px;
+        }
+    }
+
+    h1 {
+        display: inline-block;
+        color: #fff;
+        font-size: 2.5rem;
+        background: $color-accent;
+        margin: 0 auto;
+        padding: 0 20px;
+        width: auto;
+        max-width: 90%;
+        z-index: 1;
+
+        @media (max-width: 567px) {
+            font-size: 2rem;
+        }
+    }
+
+    .arrow {
+        display: inline-block;
+        position: relative;
+        font-size: 0;
+        padding: 10px;
+        animation: arrow-bounce 1s ease-in-out alternate infinite;
+
+        &:before,
+        &:after {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 40px;
+            transform: translate(0, -10px) rotate(45deg);
+            border: 0 solid #fff;
+            border-width: 0 2px 2px 0;
+            margin-top: -20px;
+        }
+
+        &-box {
+            text-align: center;
+        }
+    }
+}
+
+@keyframes arrow-bounce {
+  from {transform: translate(0, -20px);}
+}

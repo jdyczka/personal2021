@@ -4,8 +4,8 @@ import WorksItem from '../WorksItem'
 export default function Books() {
 
     const desc = (<>
-        <p>For this project I both designed and implemented a website for a fictional dance studio. It is mostly a static website, but it also includes a filterable table.</p>
-        <p>The website is implemented using React.js and utilizes styled-components for css-in-js. It also features a few slick-slider carousels. </p>
+        <p>This React.js app allows the user to browse Google Books. It supports search by title, author or genre.</p>
+        <p>The user can also add books to favourites, which are then stored in local storage.</p>
     </>)
 
     return (

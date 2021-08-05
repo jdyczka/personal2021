@@ -59,7 +59,7 @@ export default function WorksItem({ title, href, children, description, used }) 
     const domRef = useRef();
 
     return (
-        <WithIntersectionObserver domRef={domRef} options={{threshold: .6}} callback={entries => {
+        <WithIntersectionObserver domRef={domRef} options={{threshold: .4}} callback={entries => {
             entries.forEach(entry => setIsVisible(entry.isIntersecting));
         }}>
             <div className="works_item" ref={domRef}>
