@@ -94,16 +94,28 @@
                 width: 60px;
             }
 
-            &:hover:after {
-                content: attr(data-text);
-                display: block;
-                background: #fff;
-                position: absolute;
-                bottom: 80%;
-                left: 50%;
-                transform: translate(-50%);
-                padding: 5px;
-                box-shadow: 0 0 5px 0 #0004;
+            &:hover {
+
+                &:after {
+                    content: attr(data-text);
+                    display: block;
+                    background: #fff;
+                    position: absolute;
+                    bottom: 80%;
+                    left: 50%;
+                    transform: translate(-50%);
+                    padding: 5px;
+                    box-shadow: 0 0 5px 0 #0004;
+                }
+
+                img {
+                    filter: grayscale(0);
+                }
+            }
+
+            img {
+                filter: grayscale(1);
+                transition: all .3s;
             }
         }
 
